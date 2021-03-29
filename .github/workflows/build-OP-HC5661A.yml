@@ -95,6 +95,6 @@ jobs:
     - name : Upload targets
       uses: actions/upload-artifact@master
       with:
-        name: OpenWrt firmware
+        name: OP_hc5661a
         path: openwrt/bin/targets
-        UPLOAD_RELEASE: false
+      # UPLOAD_RELEASE: false
