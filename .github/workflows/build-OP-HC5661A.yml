@@ -72,6 +72,7 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_SH
         chmod +x $THEME_A
+        chmod -R 755 files
         cd openwrt
         ../$DIY_SH
         ../$THEME_A
