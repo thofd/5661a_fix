@@ -8,10 +8,12 @@
 # 修改默认IP
 sed -i 's/192.168.1.1/192.168.199.1/g' package/base-files/files/bin/config_generate
 #2.修改默认主机名
-sed -i '/uci commit system/i\uci set system.@system[0].hostname='HC5661A'' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/HC5661A/g' package/base-files/files/bin/config_generate
+#sed -i 's/root:$1$ZxXjr/8S$gS4ClQTeJuNssAsXuJoQ.0:18435:0:99999:7:::/g' /etc/shadow
+#sed -i '/uci commit system/i\uci set system.@system[0].hostname='HC5661A'' package/base-files/files/bin/config_generate
 #sed -i 's/root:$1$ZxXjr/8S$gS4ClQTeJuNssAsXuJoQ.0:18435:0:99999:7:::/g' /etc/shadow
 #3.修改默认密码
-sed -i 's/root:$1$ZxXjr/8S$gS4ClQTeJuNssAsXuJoQ.0:18435:0:99999:7:::/g' package/base-files/files/etc/shadow
+sed -i 's/root::0:0:99999:7:::/root:$1$WWdfWplo$F3cJ4znR/4yRSrgNtHk8m1:0:0:99999:7:::/g' package/base-files/files/etc/shadow
 #=================================================
 # 设置默认密码为空
 # #sed -i 's@.*CYXluq4wUazHjmCDBCqXF*@#&@g' openwrt/package/lean/default-setting/files/zzz-default-setting
